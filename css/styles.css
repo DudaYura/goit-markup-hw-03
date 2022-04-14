@@ -19,8 +19,7 @@ body {
 
 .container {
   width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -29,14 +28,14 @@ body {
 .header {
   border-bottom: 1px solid #ececec;
 }
-.main-header {
+.header .container {
   display: flex;
   align-items: center;
-  height: 80px;
 }
 .header-link-main {
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-right: 93px;
 
   font-family: "Raleway";
   font-weight: 700;
@@ -47,14 +46,10 @@ body {
 }
 .header-list {
   display: flex;
-  margin-left: 93px;
 }
 
-.header-item {
+.header-item:not(:last-child) {
   margin-right: 50px;
-}
-.header-item:last-child {
-  margin-right: 0;
 }
 
 .header-color {
@@ -79,12 +74,12 @@ body {
 
 .header-list-contacts {
   display: flex;
-  margin-left: 331px;
+  margin-left: auto;
 }
 
 .header-link-mail,
 .header-link-tel {
-  margin-right: 50px;
+  padding: 20px;
 
   font-family: "Roboto";
   font-style: normal;
@@ -94,8 +89,8 @@ body {
   letter-spacing: 0.02em;
   color: #757575;
 }
-.header-link-tel:last-child {
-  margin-right: 0;
+.header-link-tel {
+  margin-left: 50px;
 }
 .header-link-tel:hover,
 .header-link-tel:focus {
@@ -110,10 +105,11 @@ body {
   background-color: #2f303a;
   text-align: center;
 }
-
 .section-service-title {
   margin-top: 0;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
   width: 696px;
   padding-top: 200px;
 
@@ -142,7 +138,7 @@ body {
   background-color: #2196f3;
 }
 .section-service-btn:hover {
-  background-color: #2f303a;
+  background-color: #188ce8;
 }
 /* -----------------------СФЕРА ДЕЯТЕЛЬНОСТИ------------------------ */
 .visually-hidden {
@@ -161,7 +157,6 @@ body {
   display: flex;
   padding-top: 94px;
   padding-bottom: 94px;
-  align-items: center;
 }
 .section-reality-title {
   margin-top: 0px;
@@ -175,13 +170,11 @@ body {
   color: var(--title-color);
 }
 .section-reality-item {
-  margin-right: 30px;
   width: 270px;
 }
-.section-reality-item:last-child {
-  margin-right: 0px;
+.section-reality-item:not(:last-child) {
+  margin-right: 30px;
 }
-
 .section-reality-text {
   margin-top: 0;
 
@@ -191,15 +184,15 @@ body {
   color: var(--text-color);
 }
 /* ------------------ЧЕМ ЗАНИМАЮТСЯ-------------------------- */
-.section-class {
-  text-align: center;
-}
 .section-class-list {
   display: flex;
+  justify-content: center;
 }
 .section-class-item {
-  margin-right: 30px;
   padding-bottom: 94px;
+}
+.section-class-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .section-class-title {
@@ -216,7 +209,6 @@ body {
 /* --------------------КОМАНДА------------------------------- */
 .section-team {
   background-color: #f5f4fa;
-  height: 648px;
 }
 .section-team-title {
   margin-top: 0;
@@ -232,18 +224,20 @@ body {
 }
 .section-team-list {
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: 94px;
+  margin-left: -30px;
 }
 .section-team-item {
-  margin-right: 30px;
+  width: calc(100% / 4 - 30px);
+  justify-content: center;
+  margin-left: 30px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.section-team-item:last-child {
-  margin-right: 0px;
-}
+
 .section-team-item-photo {
   margin-bottom: 30px;
 }
@@ -318,6 +312,15 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 /* ----------------ПОРТФОЛИО---------------------- */
+.section-portfolio-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 94px;
+  margin-bottom: 34px;
+}
+.section-portfolio-item:not(:last-child) {
+  margin-right: 8px;
+}
 .section-portfolio-btn {
   font-family: "Roboto";
   font-style: normal;
@@ -329,11 +332,20 @@ body {
   cursor: pointer;
   color: #212121;
   background: #f5f4fa;
+  border-radius: 4px;
+  border: #f5f4fa;
+  width: 130px;
+  height: 38px;
 }
 .section-portfolio-btn:hover,
 .section-portfolio-btn:focus {
   color: #ffffff;
   background-color: #2196f3;
+}
+
+.section-portfolio-list-second {
+  display: flex;
+  flex-wrap: wrap;
 }
 .section-portfolio-title {
   margin-top: 0;
