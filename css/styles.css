@@ -182,7 +182,7 @@ body {
 }
 /* ------------------ЧЕМ ЗАНИМАЮТСЯ-------------------------- */
 .section-class {
-  padding: 94px 0px;
+  padding-bottom: 94px;
 }
 .section-class-list {
   display: flex;
@@ -312,7 +312,7 @@ body {
 .section-portfolio-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .section-portfolio-item:not(:last-child) {
   margin-right: 8px;
